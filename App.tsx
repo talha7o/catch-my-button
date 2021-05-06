@@ -34,7 +34,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {score >4 && <ConfettiCannon count={200} origin={{ x: -10, y: 0 }} />}
-      <Text>Score : {score}</Text>
+      <Text style={styles.scoreBar}>Score : {score}</Text>
       <Button
         style={{
           position: "absolute",
@@ -56,4 +56,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  scoreBar:{
+    position: 'absolute',
+    top:10
+  }
 });
